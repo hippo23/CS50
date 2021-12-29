@@ -72,6 +72,7 @@ int main(int argc, char *argv[])
     while (fread(&c, sizeof(char), 1, file))
     {
         // Allow only alphabetical characters and apostrophes
+	// printf("\nCHARACTER: %c\n\n", c);
         if (isalpha(c) || (c == '\'' && index > 0))
         {
             // Append character to word
@@ -103,6 +104,7 @@ int main(int argc, char *argv[])
         else if (index > 0)
         {
             // Terminate current word
+	    // printf("HATODGGGGGGG");
             word[index] = '\0';
 
             // Update counter
